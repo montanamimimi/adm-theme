@@ -1,11 +1,11 @@
 {
 
-  "name": "mytheme",
+  "name": "mimimiadm",
   "version": "1.0.0",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/montanamimimi/wp-empty-template.git"
+    "url": "git+https://github.com/montanamimimi/adm-theme.git"
   },
   "license": "ISC",
   "author": "montana_mimimi",

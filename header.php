@@ -10,10 +10,30 @@
     <?php wp_head(); ?> 
 </head>
 <body <?php body_class(); ?>>
-    <header>
-        <nav>
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">
+                <a href="<?php echo site_url(); ?>">
+                    <img src="<?php echo get_theme_file_uri() . '/assets/images/logo.png'; ?>" alt="Happy New Year!">
+                </a>
+            </div>
+            <nav class="header__menu">
+                <ul>
+                    <?php 
+                    
+                    if ( is_user_logged_in() ) { ?>
+                        <a class="header__menu--item" href="<?php echo wp_logout_url( home_url() ); ?>"><li>Выход</li></a>
+                    <?php } else { ?>
+                        <a class="header__menu--item" href="<?php echo site_url() . '/login'; ?>"><li>Вход</li></a>
+                        <a class="header__menu--item" href="<?php echo site_url() . '/register'; ?>"><li class="btn btn--white btn--middle">Регистрация</li></a>      
+                    <?php }
+                    
+                    ?>
+              
+                </ul>
+            </nav>
+        </div>
 
-        </nav>
     </header>
     <main>
 

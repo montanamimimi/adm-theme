@@ -1,2 +1,21 @@
 @use 'colors' as *;
 @use 'variables' as *;
+
+body {
+    font-family: 'Onest', sans-serif;
+}
+
+.container {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+h1, h2, h3 {
+    font-family: 'Neucha', sans-serif;
+    color: $darkGreen;
+}
+
+h1 {
+    font-size: 48px;
+}

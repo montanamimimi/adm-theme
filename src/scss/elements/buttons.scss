@@ -1,0 +1,40 @@
+@use '../base' as *; 
+
+.btn {
+    display: inline-block;
+
+    &--middle {
+        padding: 12px 16px;
+        border-radius: 6px;
+        font-weight: 500;
+    }
+
+    &--large {
+        padding: 24px;
+        border-radius: 24px;
+        font-size: 18px;
+    }    
+
+    &--green {
+        border: 1px solid $green;
+        background-color: $green;
+        color: white;
+
+        &:hover {
+            border: 1px solid $darkGreen;
+            background-color: $darkGreen;            
+        }
+    }
+
+    &--white {
+        border: 1px solid white;
+        background-color: white;
+        color: $darkGreen;
+
+        &:hover {
+            border: 1px solid white;
+            background-color: $green;
+            color: white;
+        }        
+    }
+}

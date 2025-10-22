@@ -1,7 +1,7 @@
 # wp-empty-template
 For theme quick start
 
-Word for search and replace: mytheme and MyTheme
+Word for search and replace: mimimiadm and MimimiAdm
 
 Package: https://www.npmjs.com/package/@wordpress/scripts
 

@@ -1,1 +1,24 @@
 @use '../base' as *; 
+
+.header {
+    background-color: $green;
+    height: 80px;
+    position: sticky;
+
+    .logo {
+        width: 65px;
+        height: 65px;
+        background-color: $lightBlue;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

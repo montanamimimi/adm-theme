@@ -1,0 +1,8 @@
+@use '../base' as *; 
+
+.banner {
+    min-height: calc(100vh - 80px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,3 +1,7 @@
 <?php get_header(); ?>
-    404
+    <section class="page404">
+        <div class="container">
+            404
+        </div>
+    </section>
 <?php get_footer(); ?>

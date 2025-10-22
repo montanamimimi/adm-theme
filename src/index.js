@@ -1,9 +1,8 @@
 import "./scss/main.scss";
-import Burger from './js/Burger';
+import Register from './js/Register';
 
 document.addEventListener('DOMContentLoaded', () => {
-  new Burger();
-  // console.log('TEST');
+  new Register();
 });
 
 

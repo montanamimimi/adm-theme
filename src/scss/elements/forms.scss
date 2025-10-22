@@ -1,0 +1,33 @@
+@use '../base' as *; 
+
+.input {
+
+    &--middle {
+        padding: 16px;
+    }
+
+    &--large {
+        padding: 24px;
+        border-radius: 24px;
+        font-size: 18px;
+    }
+
+    &--green {
+        border: 1px solid $green;
+        color: $darkGreen;
+        background-color: white;
+    }
+
+    &--error {
+        border: 3px solid $error;
+        color: $error;
+        background-color: white;
+
+
+        &::placeholder {
+            color: $error;
+            opacity: 60%;
+        }
+    }
+   
+}
