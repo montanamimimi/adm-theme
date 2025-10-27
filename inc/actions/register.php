@@ -40,9 +40,11 @@ class Register {
             wp_die('Missing fields');
         }
 
-        $username = sanitize_user($_POST['name']);
+        $name = sanitize_user($_POST['name']);
         $email = sanitize_email($_POST['email']);
         $password = $_POST['password'];
+
+        $username = sanitize_username_cyrillic($name);
 
         $user = get_user_by('email', $email);
 
@@ -58,6 +60,11 @@ class Register {
             }
 
             mimiadm_assign_random_avatar($user_id);
+
+            wp_update_user([
+                'ID' => $user_id,
+                'display_name' => $name,
+            ]);    
 
             update_field('wishlist', " -- !заполните пожелания! -- ", 'user_' . $user_id);
 
