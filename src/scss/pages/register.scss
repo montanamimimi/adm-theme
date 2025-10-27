@@ -24,3 +24,11 @@
         gap: 24px;
     }
 }
+
+@media (max-width: 600px) {
+    .register {
+        &__form {
+            width: 100%;
+        }
+    }
+}

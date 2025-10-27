@@ -56,6 +56,7 @@
         &__avatars {
             display: none;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 32px;
         }
 
@@ -64,4 +65,31 @@
         }
     }
 
+}
+
+
+@media (max-width: 800px) {
+    .profile {
+        &__info {
+            flex-direction: column;
+        }
+
+        &__picture {
+            img {
+                max-width: 100% ;
+            }
+        }
+    }
+
+    .profile-edit {
+
+        .profile {
+            &__image {
+                img {
+                    max-width: 100px;
+                }
+            }
+        }
+
+    }
 }

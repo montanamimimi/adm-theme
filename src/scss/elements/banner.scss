@@ -5,11 +5,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 
     &__container {
         display: flex;
         align-items: center;
         padding-top: 140px;
+        padding-bottom: 60px;
         gap: 32px;
     }
 
@@ -31,6 +33,19 @@
         
         img {
             height: 100%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .banner {
+        &__container {
+            padding-top: 60px;            
+            flex-direction: column;
+        }
+
+        &__text {
+            padding-right: 0;
         }
     }
 }
