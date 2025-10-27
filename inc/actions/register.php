@@ -64,6 +64,7 @@ class Register {
             wp_update_user([
                 'ID' => $user_id,
                 'display_name' => $name,
+                'roles' => array('santa'),
             ]);    
 
             update_field('wishlist', " -- !заполните пожелания! -- ", 'user_' . $user_id);
