@@ -72,8 +72,7 @@ class Register {
 
 
     public static function edit_user() {        
-        
-        error_log('TTTTTT');
+                
         $name = sanitize_text_field($_POST['name']);
         $wishlist = sanitize_text_field($_POST['wishlist']);
         $avatar = (int) $_POST['image_id'];     

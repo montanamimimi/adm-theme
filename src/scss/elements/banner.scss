@@ -5,4 +5,32 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-top: 140px;
+        gap: 32px;
+    }
+
+    &__text {
+        padding-right: 60px;
+        max-width: 600px;
+        p {
+            margin-top: 16px;
+        }
+    }
+    &__image {
+        border-radius: 50%;
+        border: 30px solid rgba(255, 255, 255, 0.6);
+        height: 600px;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        background-color: $orange;
+        
+        img {
+            height: 100%;
+        }
+    }
 }

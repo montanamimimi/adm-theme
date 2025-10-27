@@ -89,3 +89,11 @@ function mimiadm_get_available_avatars($uid) {
 
     return $arr;
 }
+
+function mimiadm_get_all_santas() {
+    $users = get_users([
+        'role' => 'santa'
+    ]);
+
+    return $users;
+}
