@@ -7,6 +7,7 @@
     <section class="profile" style="background-image:url(<?php echo get_theme_file_uri() . '/assets/images/BG5.png'; ?>)">        
         <div class="container profile__container">
             <h1><?php the_title(); ?></h1>
+            <p><?php echo (!in_array('santa', $current_user->roles)) ?  "Подождите чуть-чуть, пока главный Санта одобрит ваш профиль." : ""; ?></p>
             <div class="profile__info">
                 <div class="profile__picture">
                     <img class="profile__img" src="<?php echo mimiadm_get_user_avatar_url($current_user->ID); ?>" alt="">
