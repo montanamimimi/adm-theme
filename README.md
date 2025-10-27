@@ -1,7 +1,6 @@
-# wp-empty-template
-For theme quick start
+# adm-theme
 
-Word for search and replace: mimimiadm and MimimiAdm
+For Happy New Year
 
 Package: https://www.npmjs.com/package/@wordpress/scripts
 

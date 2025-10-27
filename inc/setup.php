@@ -12,8 +12,12 @@ class Setup {
 
     public static function redirects() {
         if (current_user_can('subscriber') && !defined('DOING_AJAX')) {
-            wp_redirect(home_url()); // redirect to homepage
-            exit;
+            global $pagenow;
+            if ($pagenow !== 'admin-post.php') {
+                wp_redirect(home_url());
+                exit;
+            }
+
         }
     }
 

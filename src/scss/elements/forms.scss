@@ -29,5 +29,21 @@
             opacity: 60%;
         }
     }
+
+    
+    &--bald {
+        border-width: 2px;
+    }
+
+    &--rounded {
+        border-radius: 16px;
+    }
    
+}
+
+textarea {
+    background-color: #fff;
+    border: 2px solid $green;
+    padding: 16px;
+    border-radius: 16px;
 }

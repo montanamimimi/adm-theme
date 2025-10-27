@@ -10,7 +10,7 @@ $error = isset($_GET['fail']) ? $_GET['fail'] : "";
 ?>
     <section class="register" style="background-image:url(<?php echo get_theme_file_uri() . '/assets/images/BG4.jpg'; ?>)">        
         <div class="container register__container">
-            <h1>Вход</h1>
+            <h1><?php the_title(); ?></h1>
             <div class="register__error">
                 <?php echo $email ? "Такой email уже зарегистрирован, войдите. " : ""; ?>
                 <?php echo $error ? $error : ""; ?>
