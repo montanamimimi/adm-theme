@@ -1,14 +1,14 @@
 <?php if ( is_user_logged_in() )  { wp_redirect(home_url()); } ?>
 <?php get_header(); ?>
 <?php 
-    $error = false;
+$error = false;
 
-    if (isset($_SERVER['QUERY_STRING'])) {
-        parse_str($_SERVER['QUERY_STRING'], $query);
-        if (isset($query['error'])) {
-            $error = $query['error'];
-        }
+if (isset($_SERVER['QUERY_STRING'])) {
+    parse_str($_SERVER['QUERY_STRING'], $query);
+    if (isset($query['error'])) {
+        $error = $query['error'];
     }
+}
 
 ?>
     <section class="register" style="background-image:url(<?php echo get_theme_file_uri() . '/assets/images/BG4.jpg'; ?>)">

@@ -24,6 +24,18 @@ h2 {
     font-size: 36px;
 }
 
+.link {
+    text-decoration: none;    
+
+    &--green {
+        color: $darkGreen;
+    }
+
+    &--bald {
+        font-weight: 600;
+    }
+}
+
 @media (max-width: 600px) {
     h1 {
         font-size: 36px;

@@ -1,6 +1,6 @@
-export default class Register {
+export default class Reset {
     constructor() {
-        this.form = document.getElementById('registerForm');
+        this.form = document.getElementById('resetForm');
         if (!this.form) return;
 
         this.error = document.querySelector('.register__error');
@@ -18,23 +18,15 @@ export default class Register {
         
         let formOk = true;
         this.error.innerHTML = "";
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;       
+        // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;       
 
-        if (data.get("name").length < 3) {
-            this.displayError("Имя подлиннее пожалста. ");
-            this.inputError("name");
-            formOk = false;
-        } else {
-            this.inputOk("name");
-        }
-
-        if (!emailRegex.test(data.get("email"))) {        
-            this.displayError("С почтой что-то не так. ");
-            this.inputError("email");
-            formOk = false;
-        } else {
-            this.inputOk("email");
-        }  
+        // if (!emailRegex.test(data.get("email"))) {        
+        //     this.displayError("С почтой что-то не так. ");
+        //     this.inputError("email");
+        //     formOk = false;
+        // } else {
+        //     this.inputOk("email");
+        // }  
 
         if (!data.get("password") || data.get("password").length < 4) {
             this.displayError("Слишком короткий пароль");
@@ -42,7 +34,7 @@ export default class Register {
             formOk = false;
         } else {
             this.inputOk("password");
-        } 
+        }         
         
         if (data.get("password") != data.get("password_ok")) {
             this.displayError("Пароли не совпадают. ");
