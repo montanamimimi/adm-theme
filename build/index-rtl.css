@@ -526,6 +526,8 @@ textarea {
   padding-top: 120px;
   background-repeat: no-repeat;
   background-position: bottom center;
+  background-color: #D9F7FF;
+  border-top: 2px solid #00873E;
 }
 
 .header__menu ul {
@@ -638,6 +640,16 @@ textarea {
     padding-right: 0;
   }
 }
+.page404 {
+  min-height: calc(100vh - 280px);
+}
+.page404__container {
+  padding-top: 60px;
+}
+.page404__container img {
+  max-width: 100%;
+}
+
 .register__container {
   padding-top: 60px;
   padding-bottom: 120px;

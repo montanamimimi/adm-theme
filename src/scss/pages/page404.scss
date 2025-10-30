@@ -1,1 +1,14 @@
 @use '../base' as *; 
+
+.page404 {
+
+    min-height: calc(100vh - 280px);
+
+    &__container {
+        padding-top: 60px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
