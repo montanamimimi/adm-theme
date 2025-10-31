@@ -640,6 +640,7 @@ textarea {
   top: 0;
   left: 0;
   border-radius: 6px;
+  z-index: 10;
 }
 .article__santa:hover .article__santa--wishlist {
   display: block;

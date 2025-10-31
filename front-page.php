@@ -27,7 +27,9 @@
                         echo "Пока никого тут нет, совсем!";
                     }
                     
-                    foreach ($santas  as $santa) { ?>
+                    foreach ($santas  as $santa) { 
+                        $list = get_field('wishlist', 'user_' . $santa->ID);
+                        ?>
 
                         <div class="article__santa">
                             <div class="article__santa--image">
@@ -36,8 +38,8 @@
                             <div class="article__santa--name">
                                 <?php echo $santa->display_name; ?>
                             </div>
-                            <div class="article__santa--wishlist">
-                                <?php echo get_field('wishlist', 'user_' . $santa->ID); ?>
+                            <div class="article__santa--wishlist" <?php echo (mb_strlen($list) > 200) ? 'style="width: 300px;" ' : "" ?>>
+                                <?php echo $list; ?>
                             </div>
                         </div>
 
