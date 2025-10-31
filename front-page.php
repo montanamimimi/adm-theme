@@ -38,8 +38,8 @@
                             <div class="article__santa--name">
                                 <?php echo $santa->display_name; ?>
                             </div>
-                            <div class="article__santa--wishlist" <?php echo (mb_strlen($list) > 200) ? 'style="width: 300px;" ' : "" ?>>
-                                <?php echo $list; ?>
+                            <div class="article__santa--wishlist">
+                                <?php echo mb_substr($list, 0, 200, 'UTF-8') . "..."; ?>
                             </div>
                         </div>
 
