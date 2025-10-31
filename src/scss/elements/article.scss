@@ -24,6 +24,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 64px;
+        justify-content: center;
     }
 
     &__santa {
@@ -32,6 +33,7 @@
         align-items: center;
         justify-content: center;
         gap: 24px;
+        position: relative;
 
         &--image {
             background-color: $yellow;
@@ -48,6 +50,24 @@
         &--name {
             font-weight: 600;
             color: $darkGreen;
+        }
+
+        &--wishlist {
+            display: none;
+            position: absolute;
+            background-color: $lightBlue;
+            border: 1px solid $green;
+            padding: 12px;
+            font-size: 12px;
+            top: 0;
+            left: 0;
+            border-radius: 6px;
+        }
+
+        &:hover {
+            .article__santa--wishlist {
+                display: block;                
+            }
         }
     }
 }
@@ -68,6 +88,19 @@
 
         &__text {
             padding-left: 0;
+        }
+
+        &__santas {
+            gap: 32px;
+        }
+        
+        &__santa {
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+
         }
     }
 }

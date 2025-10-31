@@ -2,7 +2,12 @@
 
 <?php get_header(); ?>
 
-<?php $current_user = wp_get_current_user(); ?>
+<?php 
+
+$current_user = wp_get_current_user(); 
+$forbidden = get_field('forbidden', 'user_' . $current_user->ID);
+
+?>
 
     <section class="profile" style="background-image:url(<?php echo get_theme_file_uri() . '/assets/images/BG5.png'; ?>)">        
         <div class="container profile__container">
@@ -29,7 +34,10 @@
                         <a href="<?php echo site_url() . "/edit"; ?>" class="btn btn--green btn--middle">Редактировать</a>
                     </div> 
                 </div>
-            </div>      
+            </div>   
+
+            <?php echo $forbidden ? "<p>Вам не будет назначен внучком пользователь: " . $forbidden['display_name'] . "</p>" : ""; ?>
+        
            
         </div>
     </section>

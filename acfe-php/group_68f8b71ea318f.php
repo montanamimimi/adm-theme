@@ -26,6 +26,31 @@ acf_add_local_field_group(array(
 			'prepend' => '',
 			'append' => '',
 		),
+		array(
+			'key' => 'field_69045dfacb405',
+			'label' => 'Исключение для назначения внучка',
+			'name' => 'forbidden',
+			'aria-label' => '',
+			'type' => 'user',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'role' => '',
+			'return_format' => 'array',
+			'multiple' => 0,
+			'acfe_bidirectional' => array(
+				'acfe_bidirectional_enabled' => '0',
+			),
+			'allow_null' => 0,
+			'bidirectional' => 0,
+			'bidirectional_target' => array(
+			),
+		),
 	),
 	'location' => array(
 		array(
@@ -52,7 +77,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1761562222,
+	'modified' => 1761893923,
 ));
 
 endif;

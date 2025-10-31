@@ -36,6 +36,9 @@
                             <div class="article__santa--name">
                                 <?php echo $santa->display_name; ?>
                             </div>
+                            <div class="article__santa--wishlist">
+                                <?php echo get_field('wishlist', 'user_' . $santa->ID); ?>
+                            </div>
                         </div>
 
                     <?php } ?>

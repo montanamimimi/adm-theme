@@ -605,6 +605,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 64px;
+  justify-content: center;
 }
 .article__santa {
   display: flex;
@@ -612,6 +613,7 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 24px;
+  position: relative;
 }
 .article__santa--image {
   background-color: #FEC42F;
@@ -628,6 +630,20 @@ textarea {
   font-weight: 600;
   color: #005829;
 }
+.article__santa--wishlist {
+  display: none;
+  position: absolute;
+  background-color: #EBF2FF;
+  border: 1px solid #00873E;
+  padding: 12px;
+  font-size: 12px;
+  top: 0;
+  right: 0;
+  border-radius: 6px;
+}
+.article__santa:hover .article__santa--wishlist {
+  display: block;
+}
 
 @media (max-width: 800px) {
   .article__container {
@@ -639,6 +655,13 @@ textarea {
   }
   .article__text {
     padding-right: 0;
+  }
+  .article__santas {
+    gap: 32px;
+  }
+  .article__santa img {
+    width: 100px;
+    height: 100px;
   }
 }
 .page404 {
