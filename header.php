@@ -22,7 +22,7 @@
                     <?php 
                     
                     if ( is_user_logged_in() ) { ?>
-                        <a class="header__menu--item" href="<?php echo wp_logout_url( home_url() ); ?>"><li>Выход</li></a>
+                        <a class="header__menu--item" href="<?php echo wp_logout_url( home_url() ); ?>&_wpnonce=<?php echo wp_create_nonce('log-out'); ?>"><li>Выход</li></a>
                         <a class="header__menu--item" href="<?php echo site_url() . '/profile'; ?>">
                             <img class="header__avatar" src="<?php echo mimiadm_get_user_avatar_url(false, 'thumbnail'); ?>" alt="Профиль">
                         </a>

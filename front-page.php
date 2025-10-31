@@ -6,6 +6,11 @@
             <div class="banner__text">
                 <h1>Пора врываться в Новый Год!</h1>
                 <p>Будем дарить друг другу подарки и получать от этого безграничное удовольствие.</p>
+<!-- 
+                <div class="counter">
+                    <h2>До Нового Года Осталось:</h2>
+                </div> -->
+                
             </div>
             <div class="banner__image">
                 <img src="<?php echo get_theme_file_uri() . '/assets/images/Santa.png'; ?>" alt="">

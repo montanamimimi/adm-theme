@@ -21,8 +21,10 @@ class Register {
         if ($user) {
             $password = $_POST['password'];
             reset_password($user, $password);
+
             wp_set_current_user($user->ID);
             wp_set_auth_cookie($user->ID);
+            do_action( 'wp_login', $user->user_login, $user );
 
             // Redirect after success
             wp_redirect(home_url('/profile/'));
@@ -110,6 +112,8 @@ class Register {
 
             wp_set_current_user($user_id);
             wp_set_auth_cookie($user_id);
+            $user = get_user_by( 'id', $user_id );
+            do_action( 'wp_login', $user->user_login, $user );
 
             // Redirect after success
             wp_redirect(home_url('/profile/'));
