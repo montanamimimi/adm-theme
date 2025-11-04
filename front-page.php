@@ -4,12 +4,16 @@
         <div class="container banner__container">
 
             <div class="banner__text">
-                <h1>Пора врываться в Новый Год!</h1>
+                <h1>Врываемся в Новый год!</h1>
                 <p>Будем дарить друг другу подарки и получать от этого безграничное удовольствие.</p>
-<!-- 
+
                 <div class="counter">
-                    <h2>До Нового Года Осталось:</h2>
-                </div> -->
+                    <h2>До 2026 Осталось:</h2>
+
+                    <div id="counter" class="counter__numbers">
+                            10:10:20
+                    </div>
+                </div>
                 
             </div>
             <div class="banner__image">

@@ -47,5 +47,15 @@
         &__text {
             padding-right: 0;
         }
+
+        &__image {
+
+            height: unset;
+            width: 100%;
+            
+            img {
+                width: 100%;
+            }
+        }        
     }
 }

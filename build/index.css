@@ -585,6 +585,13 @@ textarea {
   .banner__text {
     padding-right: 0;
   }
+  .banner__image {
+    height: unset;
+    width: 100%;
+  }
+  .banner__image img {
+    width: 100%;
+  }
 }
 .article {
   padding-top: 60px;
@@ -665,6 +672,17 @@ textarea {
     height: 100px;
   }
 }
+.counter {
+  margin-top: 40px;
+}
+.counter h2 {
+  text-transform: uppercase;
+}
+.counter__numbers {
+  font-size: 54px;
+  color: #a15000;
+}
+
 .page404 {
   min-height: calc(100vh - 280px);
 }

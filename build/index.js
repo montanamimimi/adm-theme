@@ -2,6 +2,38 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/Counter.js":
+/*!***************************!*\
+  !*** ./src/js/Counter.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Counter)
+/* harmony export */ });
+class Counter {
+  constructor() {
+    this.counter = document.getElementById('counter');
+    if (!this.counter) return;
+    this.now = new Date();
+    this.nextYear = this.now.getFullYear() + 1;
+    this.newYear = new Date(`January 1, ${this.nextYear} 00:00:00`);
+    this.diff = (this.newYear - this.now) / 1000;
+    this.updateCountdown();
+  }
+  updateCountdown() {
+    this.diff = this.diff - 1;
+    const hours = Math.floor(this.diff / (60 * 60));
+    const mins = Math.floor((this.diff - hours * 60 * 60) / 60);
+    const secs = Math.floor(this.diff - hours * 60 * 60 - mins * 60);
+    this.counter.innerText = `${hours.toString().padStart(2, '0')}:` + `${mins.toString().padStart(2, '0')}:` + `${secs.toString().padStart(2, '0')}`;
+    setTimeout(() => this.updateCountdown(), 1000);
+  }
+}
+
+/***/ }),
+
 /***/ "./src/js/Login.js":
 /*!*************************!*\
   !*** ./src/js/Login.js ***!
@@ -324,6 +356,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_Profile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/Profile */ "./src/js/Profile.js");
 /* harmony import */ var _js_Login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/Login */ "./src/js/Login.js");
 /* harmony import */ var _js_Reset__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/Reset */ "./src/js/Reset.js");
+/* harmony import */ var _js_Counter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/Counter */ "./src/js/Counter.js");
+
 
 
 
@@ -334,6 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
   new _js_Profile__WEBPACK_IMPORTED_MODULE_2__["default"]();
   new _js_Login__WEBPACK_IMPORTED_MODULE_3__["default"]();
   new _js_Reset__WEBPACK_IMPORTED_MODULE_4__["default"]();
+  new _js_Counter__WEBPACK_IMPORTED_MODULE_5__["default"]();
 });
 })();
 
