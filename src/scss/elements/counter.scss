@@ -1,0 +1,16 @@
+@use '../base' as *; 
+
+.counter {
+
+    margin-top: 40px;
+
+    h2 {
+        text-transform: uppercase;
+    }
+
+    &__numbers {
+        font-size: 54px;
+        color: $mustard;
+    }
+
+}
