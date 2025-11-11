@@ -7,6 +7,26 @@ acf_add_local_field_group(array(
 	'title' => 'Настройки',
 	'fields' => array(
 		array(
+			'key' => 'field_6911b07f85893',
+			'label' => 'Рандом завершен?',
+			'name' => 'randomizer',
+			'aria-label' => '',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
 			'key' => 'field_68f89e72c9518',
 			'label' => 'Аватарки',
 			'name' => 'avatars',
@@ -108,7 +128,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1761562215,
+	'modified' => 1762767002,
 ));
 
 endif;

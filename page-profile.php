@@ -6,7 +6,15 @@
 
 $current_user = wp_get_current_user(); 
 $forbidden = get_field('forbidden', 'user_' . $current_user->ID);
+$kids = get_field('kids', 'user_' . $current_user->ID);
 
+$message = '<h2>Вот имена счастливчиков:</h2>';
+
+foreach ($kids as $kid) {
+    $wishlist = get_field('wishlist', 'user_' . $kid['ID']);
+    $message .= '<h3>' . $kid['display_name'] . '</h3>';
+    $message .= '<p>' . $wishlist . '</p>';                
+}
 ?>
 
     <section class="profile" style="background-image:url(<?php echo get_theme_file_uri() . '/assets/images/BG5.png'; ?>)">        
@@ -37,8 +45,10 @@ $forbidden = get_field('forbidden', 'user_' . $current_user->ID);
             </div>   
 
             <?php echo $forbidden ? "<p>Вам не будет назначен внучком пользователь: " . $forbidden['display_name'] . "</p>" : ""; ?>
-        
-           
+            <div class="profile__kids">
+                <?php echo $message; ?>
+            </div>
+            
         </div>
     </section>
 <?php get_footer(); ?>

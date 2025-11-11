@@ -14,7 +14,19 @@
                             10:10:20
                     </div>
                 </div>
+                <?php
                 
+                if (!get_field('randomizer', 'options') && current_user_can('administrator')) { ?>
+                    <div class="randomizer">
+                        <a class="btn btn--green btn--middle" 
+                            href="<?php echo admin_url('admin-post.php?action=start_the_party'); ?>"
+                        >ЗАПУСТИТЬ РАНДОМ</a>
+                        <a class="btn btn--green btn--middle" 
+                            href="<?php echo admin_url('admin-post.php?action=email_party'); ?>"
+                        >выслать email</a>                        
+                    </div>
+                <?php } ?>
+
             </div>
             <div class="banner__image">
                 <img src="<?php echo get_theme_file_uri() . '/assets/images/Santa.png'; ?>" alt="">

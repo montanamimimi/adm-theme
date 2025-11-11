@@ -51,13 +51,38 @@ acf_add_local_field_group(array(
 			'bidirectional_target' => array(
 			),
 		),
+		array(
+			'key' => 'field_6911b1dab3140',
+			'label' => 'Внучки',
+			'name' => 'kids',
+			'aria-label' => '',
+			'type' => 'user',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'role' => '',
+			'return_format' => 'array',
+			'multiple' => 1,
+			'acfe_bidirectional' => array(
+				'acfe_bidirectional_enabled' => '0',
+			),
+			'allow_null' => 0,
+			'bidirectional' => 0,
+			'bidirectional_target' => array(
+			),
+		),
 	),
 	'location' => array(
 		array(
 			array(
-				'param' => 'current_user',
+				'param' => 'user_form',
 				'operator' => '==',
-				'value' => 'viewing_back',
+				'value' => 'all',
 			),
 		),
 	),
@@ -77,7 +102,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1761893923,
+	'modified' => 1762767410,
 ));
 
 endif;
